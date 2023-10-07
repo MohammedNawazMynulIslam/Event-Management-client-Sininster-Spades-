@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/SINISTER-LOGO.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   const navlink = (
     <>
       <li>
@@ -83,9 +87,10 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end">
+          <p>{user?.displayName}</p>
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar mr-4">
             <div className="w-10 rounded-full ">
-              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <img src={user?.photoURL} />
             </div>
           </label>
           <Link to="/login">
