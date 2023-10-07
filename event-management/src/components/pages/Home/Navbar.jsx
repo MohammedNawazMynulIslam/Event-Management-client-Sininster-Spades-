@@ -4,8 +4,14 @@ import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 const Navbar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logout } = useContext(AuthContext);
   console.log(user);
+  const handleSignOut = () => {
+    logout().then((result) => {
+      console.log(result);
+    });
+  };
+
   const navlink = (
     <>
       <li>
@@ -38,7 +44,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/blog"
+          to="/merchandise"
           className={({ isActive, isNonActive }) =>
             isNonActive
               ? "non active"
@@ -47,7 +53,21 @@ const Navbar = () => {
               : ""
           }
         >
-          Blog
+          Merchandise
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/gallery"
+          className={({ isActive, isNonActive }) =>
+            isNonActive
+              ? "non active"
+              : isActive
+              ? "text-purple-700 font-bold underline text-xl"
+              : ""
+          }
+        >
+          Gallery
         </NavLink>
       </li>
     </>
@@ -93,9 +113,16 @@ const Navbar = () => {
               <img src={user?.photoURL} />
             </div>
           </label>
-          <Link to="/login">
-            <button className="btn">Login</button>
-          </Link>
+
+          {user ? (
+            <button onClick={handleSignOut} className="btn btn-accent">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login">
+              <button className="btn">Login</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>

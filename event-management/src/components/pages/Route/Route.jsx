@@ -1,13 +1,15 @@
-import FAQ from "../FAQ/FAQ";
 import Home from "../Home/Home";
 import Events from "../Events/Events";
-import Blog from "../Blog/Blog";
+
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../../Root/Root";
 import Error from "../Error/Error";
 import ServiceDetails from "../Home/ServiceDetails";
 import Login from "../Login/Login";
 import SignUp from "../SignUp/SignUp";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
+import Merchandise from "../../PrivateRoute/Merchandise/Merchandise";
+import Gallery from "../Gallery/Gallery";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,16 +27,29 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("service.json"),
       },
+
       {
-        path: "/faq",
-        element: <FAQ />,
+        path: "/merchandise",
+        element: (
+          <PrivateRoute>
+            <Merchandise />
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/blog",
-        element: <Blog></Blog>,
+        path: "/gallery",
+        element: (
+          <PrivateRoute>
+            <Gallery></Gallery>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
