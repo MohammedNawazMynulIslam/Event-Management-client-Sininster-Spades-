@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import Achievements from "./Achievements";
 import EventClass from "./EventClass";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner></Banner>
       <Services></Services>
       <EventClass></EventClass>
+      <Achievements></Achievements>
       <Footer></Footer>
     </div>
   );
