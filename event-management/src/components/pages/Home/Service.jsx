@@ -13,7 +13,7 @@ const Service = ({ service }) => {
           <p>{description}</p>
           <div className="card-actions justify-center item-center mt-5">
             <p>price: ${price}</p>
-            <Link to={`/service.json/${id}`}>
+            <Link to={`/service/${id}`}>
               <button className="btn btn-primary">More Details</button>
             </Link>
           </div>
