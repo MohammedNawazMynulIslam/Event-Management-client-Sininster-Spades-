@@ -1,16 +1,28 @@
 import { Link } from "react-router-dom";
 import Navbar from "../Home/Navbar";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
-  const { user, createUser } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const user = e.target.name.value;
+
+    const passwordCheck = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.{6,})/;
+    if (!passwordCheck.test(password)) {
+      notifyError(
+        "Password must be at least 6 characters long, contain at least one capital letter, and one special character."
+      );
+      return;
+    }
+
     console.log(user, email, password);
     createUser(email, password)
       .then((result) => {
@@ -22,6 +34,11 @@ const SignUp = () => {
         notifyError("Invalid email or password");
       });
   };
+
+  const ShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   const notifySuccess = (message) => {
     toast.success(message, {
       position: "top-left",
@@ -70,15 +87,25 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text"> Password</span>
                 </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                  className="input input-bordered"
-                  required
-                />
+                <div className="flex justify-center items-center">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    name="password"
+                    placeholder="password"
+                    className="input input-bordered"
+                    required
+                  />
+                  <div className="-ml-10">
+                    {showPassword ? (
+                      <FaEyeSlash onClick={ShowPassword} />
+                    ) : (
+                      <FaEye onClick={ShowPassword} />
+                    )}
+                  </div>
+                </div>
+
                 <label className="label">
                   <Link to="/login">
                     <button className="label-text-alt link link-hover">

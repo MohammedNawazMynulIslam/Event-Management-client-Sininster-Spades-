@@ -6,7 +6,20 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { user, signIn } = useContext(AuthContext);
+  const { user, signIn, googleSignIn } = useContext(AuthContext);
+
+  const notifySuccess = (message) => {
+    toast.success(message, {
+      position: "top-right",
+    });
+  };
+
+  const notifyError = (message) => {
+    toast.error(message, {
+      position: "top-right",
+    });
+  };
+
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -23,16 +36,14 @@ const Login = () => {
       });
   };
 
-  const notifySuccess = (message) => {
-    toast.success(message, {
-      position: "top-right",
-    });
-  };
-
-  const notifyError = (message) => {
-    toast.error(message, {
-      position: "top-right",
-    });
+  const handleGoogle = () => {
+    googleSignIn()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -81,6 +92,10 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
+                <p className="text-center my-7">or with login with </p>
+                <button onClick={handleGoogle} className="btn">
+                  Google
+                </button>
               </div>
             </form>
           </div>
