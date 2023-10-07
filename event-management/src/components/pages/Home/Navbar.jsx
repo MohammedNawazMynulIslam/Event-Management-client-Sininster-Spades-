@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../../assets/SINISTER-LOGO.png";
 
 const Navbar = () => {
@@ -88,7 +88,9 @@ const Navbar = () => {
               <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
             </div>
           </label>
-          <a className="btn">Login</a>
+          <Link to="/login">
+            <button className="btn">Login</button>
+          </Link>
         </div>
       </div>
     </div>

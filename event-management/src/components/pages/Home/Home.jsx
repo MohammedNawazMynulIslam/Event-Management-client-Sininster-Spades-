@@ -19,7 +19,6 @@ const Home = () => {
       <div data-aos="fade-up-left">
         <Services></Services>
       </div>
-
       <EventClass></EventClass>
       <Achievements></Achievements>
       <Footer></Footer>
