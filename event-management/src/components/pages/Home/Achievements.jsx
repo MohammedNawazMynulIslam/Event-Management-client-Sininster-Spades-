@@ -1,6 +1,6 @@
 const Achievements = () => {
   return (
-    <div className="mt-28">
+    <div className="mt-28" data-aos="zoom-in-down">
       <div
         className="hero min-h-screen"
         style={{

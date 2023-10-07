@@ -9,9 +9,12 @@ const EventClass = () => {
         Lets Join Your Team
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
         {/* junior */}
-        <div className="border bg-black hover:cursor-pointe">
+        <div
+          className="border bg-black hover:cursor-pointer"
+          data-aos="fade-right"
+        >
           <h2 className="text-center font-bold text-3xl p-4 text-purple-950">
             Junior Class
           </h2>
@@ -39,7 +42,10 @@ const EventClass = () => {
           <button className="btn btn-secondary ml-44 mb-5">Show Events</button>
         </div>
         {/* junior */}
-        <div className="border bg-black hover:cursor-pointe">
+        <div
+          className="border bg-black hover:cursor-pointer"
+          data-aos="flip-up"
+        >
           <h2 className="text-center font-bold text-3xl p-4 text-purple-950">
             Middle Class
           </h2>
@@ -67,7 +73,10 @@ const EventClass = () => {
           <button className="btn btn-secondary ml-44 mb-5">Show Events</button>
         </div>
         {/* junior */}
-        <div className="border bg-black hover:cursor-pointe">
+        <div
+          className="border bg-black hover:cursor-pointer"
+          data-aos="fade-left"
+        >
           <h2 className="text-center font-bold text-3xl p-4 text-purple-950">
             Expert Class
           </h2>
