@@ -1,0 +1,45 @@
+
+       [
+        {
+          "id": 1,
+          "name": "Tournament Hosting",
+          "image": "https://i.ibb.co/n8W8NMF/stem-list-EVgs-Ab-L51-Rk-unsplash.jpg",
+          "price": 500,
+          "description": "Organize and host competitive gaming tournaments with professional setup and management."
+        },
+        {
+          "id": 2,
+          "name": "LAN Party Setup",
+          "image": "https://i.ibb.co/g79K8cw/ella-don-f-K5-Oomnc-Wk-unsplash.jpg",
+          "price": 800,
+          "description": "Set up a local area network for a large-scale gaming event, including equipment and technical support."
+        },
+        {
+          "id": 3,
+          "name": "Live Streaming Service",
+          "image": "https://i.ibb.co/wNFGbpZ/jesus-loves-austin-0-O0gux4-OZX4-unsplash.jpg",
+          "price": 300,
+          "description": "Provide high-quality live streaming services for gaming events, ensuring a seamless viewing experience."
+        },
+        {
+          "id": 4,
+          "name": "Prize Pool Management",
+          "image": "https://i.ibb.co/vVdqfQg/F487ca-DWYAEldqw.jpg",
+          "price": 400,
+          "description": "Handle the distribution of prizes, cash, and merchandise for tournament winners and participants."
+        },
+        {
+          "id": 5,
+          "name": "Custom Event Branding",
+          "image": "https://i.ibb.co/4W3161R/stem-list-ry-RU-cd1yas-unsplash.jpg",
+          "price": 200,
+          "description": "Design and implement custom branding for your gaming event, including logos, banners, and marketing materials."
+        },
+        {
+          "id": 6,
+          "name": "Technical Support Team",
+          "image": "https://i.ibb.co/SXBcdCj/mimi-thian-ZKBzlifgkgw-unsplash.jpg",
+          "price": 600,
+          "description": "Provide on-site technical support and troubleshooting for gaming setups and equipment during the event."
+        }
+      ]

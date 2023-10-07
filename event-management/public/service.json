@@ -1,0 +1,45 @@
+
+    [
+      {
+        "id": "1",
+        "name": "Tournament Hosting",
+        "image": "https://i.ibb.co/n8W8NMF/stem-list-EVgs-Ab-L51-Rk-unsplash.jpg",
+        "price": 500,
+        "description": "Organize and host competitive gaming tournaments with professional setup and management. Our experienced team will handle all aspects of the event, from scheduling matches to ensuring fair play and resolving disputes. We provide top-tier gaming equipment and a comfortable venue, creating an immersive experience for participants and spectators alike."
+      },
+      {
+        "id": "2",
+        "name": "LAN Party Setup",
+        "image": "https://i.ibb.co/g79K8cw/ella-don-f-K5-Oomnc-Wk-unsplash.jpg",
+        "price": 800,
+        "description": "Set up a local area network for a large-scale gaming event, including equipment and technical support. Our skilled technicians will configure the network for optimal performance, ensuring low latency and seamless gameplay. Additionally, we provide a range of gaming peripherals and accessories to enhance the gaming experience. With our LAN party setup, you can host an unforgettable event for your gaming community."
+      },
+      {
+        "id": "3",
+        "name": "Live Streaming Service",
+        "image": "https://i.ibb.co/wNFGbpZ/jesus-loves-austin-0-O0gux4-OZX4-unsplash.jpg",
+        "price": 300,
+        "description": "Provide high-quality live streaming services for gaming events, ensuring a seamless viewing experience. Our professional production team will handle all aspects of the live stream, including camera setup, graphics integration, and commentary. We utilize state-of-the-art equipment and streaming platforms to deliver crisp, high-definition video to your audience. Whether it's a competitive tournament or a casual gaming session, our live streaming service will elevate the visibility of your event."
+      },
+      {
+        "id": "4",
+        "name": "Prize Pool Management",
+        "image": "https://i.ibb.co/vVdqfQg/F487ca-DWYAEldqw.jpg",
+        "price": 400,
+        "description": "Handle the distribution of prizes, cash, and merchandise for tournament winners and participants. Our experienced team will ensure that prizes are allocated fairly and efficiently, taking into account tournament rankings and special achievements. We offer a wide range of prizes to suit different preferences, from gaming peripherals to cash rewards. With our prize pool management service, you can motivate participants and create a competitive edge for your gaming event."
+      },
+      {
+        "id": "5",
+        "name": "Custom Event Branding",
+        "image": "https://i.ibb.co/4W3161R/stem-list-ry-RU-cd1yas-unsplash.jpg",
+        "price": 200,
+        "description": "Design and implement custom branding for your gaming event, including logos, banners, and marketing materials. Our creative team will work closely with you to capture the essence of your event and create a unique visual identity. We provide a range of design options and styles to align with your vision. With our custom event branding, you can leave a lasting impression on participants and attendees, making your event stand out in the gaming community."
+      },
+      {
+        "id": "6",
+        "name": "Technical Support Team",
+        "image": "https://i.ibb.co/SXBcdCj/mimi-thian-ZKBzlifgkgw-unsplash.jpg",
+        "price": 600,
+        "description": "Provide on-site technical support and troubleshooting for gaming setups and equipment during the event. Our skilled technicians will be present throughout the event to address any technical issues that may arise. From configuring gaming rigs to troubleshooting network connectivity, our support team ensures a smooth and uninterrupted gaming experience. With our technical support team on standby, you can focus on enjoying the event, knowing that any technical challenges will be swiftly resolved."
+      }
+    ]
