@@ -11,7 +11,7 @@ const Navbar = () => {
             isNonActive
               ? "non active"
               : isActive
-              ? "text-purple-700 font-bold underline"
+              ? "text-purple-700 font-bold underline text-xl"
               : ""
           }
         >
@@ -25,7 +25,7 @@ const Navbar = () => {
             isNonActive
               ? "non active"
               : isActive
-              ? "text-purple-700 font-bold underline"
+              ? "text-purple-700 font-bold underline text-xl"
               : ""
           }
         >
@@ -39,7 +39,7 @@ const Navbar = () => {
             isNonActive
               ? "non active"
               : isActive
-              ? "text-purple-700 font-bold underline"
+              ? "text-purple-700 font-bold underline text-xl"
               : ""
           }
         >
