@@ -5,13 +5,46 @@ const Navbar = () => {
   const navlink = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive, isNonActive }) =>
+            isNonActive
+              ? "non active"
+              : isActive
+              ? "text-purple-700 font-bold underline"
+              : ""
+          }
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/about">About Us</NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive, isNonActive }) =>
+            isNonActive
+              ? "non active"
+              : isActive
+              ? "text-purple-700 font-bold underline"
+              : ""
+          }
+        >
+          About Us
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/blog">Blog</NavLink>
+        <NavLink
+          to="/blog"
+          className={({ isActive, isNonActive }) =>
+            isNonActive
+              ? "non active"
+              : isActive
+              ? "text-purple-700 font-bold underline"
+              : ""
+          }
+        >
+          Blog
+        </NavLink>
       </li>
     </>
   );

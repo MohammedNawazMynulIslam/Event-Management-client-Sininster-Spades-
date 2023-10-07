@@ -20,33 +20,35 @@ const Banner = () => {
               If you have patients this is the place for you to shine and rise
               above all.
             </p>
-            <ul className="grid grid-cols-2">
-              <li className="flex gap-2 items-center ">
+            <ul className="grid grid-cols-2 mb-3">
+              <li className="flex gap-2 items-center my-2">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 World Live Streaming
               </li>
-              <li className="flex gap-2 items-center ">
+              <li className="flex gap-2 items-center my-2 ">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Big Winner Gift
               </li>
-              <li className="flex gap-2 items-center ">
+              <li className="flex gap-2 items-center my-2 ">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Best Streamer of the Month
               </li>
-              <li className="flex gap-2 items-center ">
+              <li className="flex gap-2 items-center my-2 ">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 VFX Support
               </li>
-              <li className="flex gap-2 items-center ">
+              <li className="flex gap-2 items-center my-2 ">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Arranging Events
               </li>
-              <li className="flex gap-2 items-center ">
+              <li className="flex gap-2 items-center my-2 ">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Sponsor Support
               </li>
             </ul>
-            <button className="btn btn-primary my-7">Get Started</button>
+            <button className="btn btn-primary my-7 mr-20">
+              Join Community
+            </button>
           </div>
         </div>
       </div>
