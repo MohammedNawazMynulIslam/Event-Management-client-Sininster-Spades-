@@ -1,15 +1,42 @@
 import { Link } from "react-router-dom";
+import Navbar from "../Home/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const SignUp = () => {
+  const { user, createUser } = useContext(AuthContext);
   const handleSignUp = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     const user = e.target.name.value;
     console.log(user, email, password);
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+        notifySuccess("SignUp Successfully");
+      })
+      .catch((error) => {
+        console.error(error);
+        notifyError("Invalid email or password");
+      });
   };
+  const notifySuccess = (message) => {
+    toast.success(message, {
+      position: "top-left",
+    });
+  };
+
+  const notifyError = (message) => {
+    toast.error(message, {
+      position: "top-left",
+    });
+  };
+
   return (
     <div>
+      <Navbar></Navbar>
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex">
           <div className="text-center lg:text-left ">
@@ -70,6 +97,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
