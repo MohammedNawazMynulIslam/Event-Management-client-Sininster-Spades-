@@ -3,11 +3,25 @@ import Navbar from "../Home/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+
+  const notifySuccess = (message) => {
+    toast.success(message, {
+      position: "top-center",
+    });
+  };
+
+  const notifyError = (message) => {
+    toast.error(message, {
+      position: "top-center",
+    });
+  };
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -37,18 +51,6 @@ const SignUp = () => {
 
   const ShowPassword = () => {
     setShowPassword(!showPassword);
-  };
-
-  const notifySuccess = (message) => {
-    toast.success(message, {
-      position: "top-left",
-    });
-  };
-
-  const notifyError = (message) => {
-    toast.error(message, {
-      position: "top-left",
-    });
   };
 
   return (
@@ -124,7 +126,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

@@ -4,29 +4,18 @@ import { useContext } from "react";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { user, signIn, googleSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
-  const notifySuccess = (message) => {
-    toast.success(message, {
-      position: "top-right",
-    });
-  };
-
-  const notifyError = (message) => {
-    toast.error(message, {
-      position: "top-right",
-    });
-  };
-
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password, user);
+
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
@@ -35,7 +24,11 @@ const Login = () => {
       })
       .catch((error) => {
         console.error(error);
-        notifyError("Invalid email or password");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Invalid email or password!",
+        });
       });
   };
 
@@ -44,12 +37,24 @@ const Login = () => {
       .then((result) => {
         console.log(result);
         navigate(location?.state ? location.state : "/");
+        notifySuccess("Login Successfully");
       })
       .catch((error) => {
         console.error(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error signing in with Google!",
+        });
       });
   };
-
+  const notifySuccess = (message) => {
+    Swal.fire({
+      icon: "success",
+      title: "Success!",
+      text: message,
+    });
+  };
   return (
     <div>
       <Navbar />
@@ -96,7 +101,7 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
-                <p className="text-center my-7">or with login with </p>
+                <p className="text-center my-7">or login with </p>
                 <button onClick={handleGoogle} className="btn">
                   Google
                 </button>
