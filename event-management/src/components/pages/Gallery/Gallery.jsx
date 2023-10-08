@@ -1,5 +1,11 @@
 import Navbar from "../Home/Navbar";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Gallery = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div className="container mx-auto mt-10 ">
       <Navbar></Navbar>
@@ -21,6 +27,7 @@ const Gallery = () => {
             </a>
           </div>
         </div>
+
         <div id="slide2" className="carousel-item relative w-full">
           <img src="https://i.ibb.co/nQZTbty/2341051.jpg" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

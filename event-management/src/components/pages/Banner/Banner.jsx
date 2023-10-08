@@ -21,27 +21,27 @@ const Banner = () => {
               above all.
             </p>
             <ul className="grid grid-cols-2 mb-3">
-              <li className="flex gap-2 items-center my-2">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 World Live Streaming
               </li>
-              <li className="flex gap-2 items-center my-2 ">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Big Winner Gift
               </li>
-              <li className="flex gap-2 items-center my-2 ">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Best Streamer of the Month
               </li>
-              <li className="flex gap-2 items-center my-2 ">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 VFX Support
               </li>
-              <li className="flex gap-2 items-center my-2 ">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Arranging Events
               </li>
-              <li className="flex gap-2 items-center my-2 ">
+              <li className="flex gap-2 items-center my-2 text-white">
                 <FaRegCheckCircle className="text-purple-950 text-2xl"></FaRegCheckCircle>
                 Sponsor Support
               </li>
