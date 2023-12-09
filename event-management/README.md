@@ -3,6 +3,15 @@
 Website name: Sinister Spades
 Link to website: https://sinisterspades-auth.web.app
 
+Frontend Technologies:
+
+React
+AOS (Animate On Scroll): Library for stunning scroll-based animations
+Firebase: Cloud-based platform for web and mobile app development
+React Icons: Library with popular icons for React applications
+React Toastify: Responsive and customizable toast notifications for React
+SweetAlert2: Beautiful, responsive, customizable alert dialogs
+
 <!-- 5 Features -->
 1. Upon login the user can see their profile picture and name at the top right of the screen
 2. Register users can only see the merchandise and gallery tabs
